@@ -7,6 +7,16 @@
                           [clojure.data.json :as json])
   (:gen-class))
 
+(def people-collection (atom []))
+
+(defn addperson [firstname surname]
+  (swap! people-collection conj {:firstname (str/capitalize firstname) :surname (str/capitalize surname)}))
+
+
+(defn people-handler [req]
+  {:status  200
+   :headers {"Content-Type" "text/json"}
+   :body    (str (json/write-str @people-collection))})
 
 (defn simple-body-page [req]
   {:status  200
@@ -33,11 +43,13 @@
            (GET "/" [] simple-body-page)
            (GET "/request" [] request-example)
            (GET "/hello" [] hello-name)
+           (GET "/people" [] people-handler)
            (route/not-found "Error, page not found!"))
 
 
 
-
+(addperson "Functional" "Human")
+(addperson "Micky" "Mouse")
 
 (defn -main
   "This is our main entry point"
