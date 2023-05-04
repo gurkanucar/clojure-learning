@@ -1,3 +1,15 @@
+# res
+
+[https://clojure.org/guides/getting_started](https://clojure.org/guides/getting_started)
+[https://www.baeldung.com/clojure](https://www.baeldung.com/clojure)
+[https://medium.com/swlh/building-a-rest-api-in-clojure-3a1e1ae096e](https://medium.com/swlh/building-a-rest-api-in-clojure-3a1e1ae096e)
+[https://www.tutorialspoint.com/clojure/index.htm](https://www.tutorialspoint.com/clojure/index.htm)
+
+[]()
+
+
+
+
 # first
 
 A Clojure library designed to ... well, that part is up to you.
